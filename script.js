@@ -9,6 +9,7 @@ const afterApplySection = document.getElementById('after-apply-section');
 const heroImage = document.querySelector('#home .image img');
 const howToApplyVideo = document.querySelector('#how-to-apply-section .video iframe');
 const doubleClickInstruction = document.querySelector('.double-click-instruction');
+const allListItems = document.querySelectorAll('li');
 
 function scrollToSection(section) {
     console.log('here')
@@ -38,4 +39,7 @@ doubleClickInstruction.addEventListener('dblclick', function () {
 document.addEventListener('contextmenu', function (event) {
     event.preventDefault();
     alert('Visit the IRRC website for more information.');
+});
+allListItems.forEach(function (li) {
+    li.style.fontWeight = 'bold';
 });
