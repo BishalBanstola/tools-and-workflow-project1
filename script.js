@@ -8,6 +8,7 @@ const howToApplySection = document.getElementById('how-to-apply-section');
 const afterApplySection = document.getElementById('after-apply-section');
 const heroImage = document.querySelector('#home .image img');
 const howToApplyVideo = document.querySelector('#how-to-apply-section .video iframe');
+const doubleClickInstruction = document.querySelector('.double-click-instruction');
 
 function scrollToSection(section) {
     console.log('here')
@@ -29,4 +30,12 @@ heroImage.addEventListener('mouseenter', () => {
 
 heroImage.addEventListener('mouseout', () => {
     heroImage.style.transform = 'scale(1)';
+});
+
+doubleClickInstruction.addEventListener('dblclick', function () {
+    window.open('https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/eligibility.html', '_blank');
+});
+document.addEventListener('contextmenu', function (event) {
+    event.preventDefault();
+    alert('Visit the IRRC website for more information.');
 });
