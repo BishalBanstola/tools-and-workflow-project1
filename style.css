@@ -82,3 +82,21 @@ header h1 {
     flex-wrap: wrap;
     justify-content: center;
 }
+.text {
+    color: #333; /* Text color for elements with the .text class */
+    font-size: 16px; /* Font size for elements with the .text class */
+    margin: 10px 0; /* Margins around elements with the .text class (top and bottom) */
+    flex: 1;
+    max-width: 600px;
+}
+.text h2 {
+    color: #007bff; /* Text color for <h2> elements within .text */
+    font-size: 36px; /* Font size for <h2> elements within .text */
+    font-weight: bold; /* Bold text for <h2> elements within .text */
+    margin-bottom: 20px 0; /* Margins around <h2> elements within .text (top and bottom) */
+}
+.text p {
+    color: #333; /* Text color for <p> elements within .text */
+    font-size: 18px; /* Font size for <p> elements within .text */
+    margin: 10px 0; /* Margins around <p> elements within .text (top and bottom) */
+}
