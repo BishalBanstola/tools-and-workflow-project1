@@ -105,3 +105,11 @@ header h1 {
     height: 150px; /* Height of elements with the .image class */
     border: 1px solid #333; /* Border around elements with the .image class */
 }
+.video {
+    background-color: #f0f0f0; /* Background color for elements with the .video class */
+    width: 300px; /* Width of elements with the .video class */
+    height: 200px; /* Height of elements with the .video class */
+    border: 1px solid #333; /* Border around elements with the .video class */
+    flex: 1;
+    margin-top: 20px;   
+}
