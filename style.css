@@ -125,3 +125,19 @@ header h1 {
     margin: 10px 0; /* Margin above and below the iframe */
     display: block; /* Make the iframe a block-level element */
 }
+#boxes {
+    /* Your CSS styles for the element with id="boxes" go here */
+    background-color: #f0f0f0; /* Example background color */
+    color: #333; /* Example text color */
+    font-size: 16px; /* Example font size */
+    padding: 50px;
+}
+.box {
+    background-color: #fff; /* Background color for elements with the .box class */
+    width: 200px; /* Width of elements with the .box class */
+    height: 150px; /* Height of elements with the .box class */
+    border: 1px solid #ddd; /* Border around elements with the .box class */
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
