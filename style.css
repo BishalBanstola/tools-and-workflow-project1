@@ -99,4 +99,9 @@ header h1 {
     color: #333; /* Text color for <p> elements within .text */
     font-size: 18px; /* Font size for <p> elements within .text */
     margin: 10px 0; /* Margins around <p> elements within .text (top and bottom) */
+}.image {
+    background-color: #f0f0f0; /* Background color for elements with the .image class */
+    width: 200px; /* Width of elements with the .image class */
+    height: 150px; /* Height of elements with the .image class */
+    border: 1px solid #333; /* Border around elements with the .image class */
 }
