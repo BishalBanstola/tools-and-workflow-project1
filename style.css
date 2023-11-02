@@ -28,3 +28,6 @@ h2 {
 p {
     color: rgb(0, 0, 255); /* Using RGB for blue */
 }
+p {
+    color: hsl(240, 100%, 50%); /* Using HSL for blue */
+}
