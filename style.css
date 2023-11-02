@@ -55,4 +55,16 @@ body {
     background-color: #f0f0f0; /* Background color for the .container class */
     padding: 20px; /* Padding inside the .container class */
     border: 1px solid #333; /* Border around the .container class */
+}header {
+    background-color: #007bff; /* Background color for the <header> */
+    color: #fff; /* Text color for the <header> */
+    font-size: 24px; /* Font size for the text within the <header> */
+    font-weight: bold; /* Bold text within the <header> */
+    text-align: center; /* Center align text content within the <header> */
+    padding: 15px; /* Padding for spacing within the <header> */
+}
+header h1 {
+    color: #333; /* Text color for the <h1> element within a <header> */
+    font-size: 24px; /* Font size for the <h1> element within a <header> */
+    font-weight: bold; /* Bold text for the <h1> element within a <header> */
 }
