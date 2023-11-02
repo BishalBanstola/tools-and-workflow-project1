@@ -6,3 +6,13 @@ body {
 h1 {
     color: #333;
 }
+h2 {
+    color: #333; /* Text color */
+    font-size: 24px; /* Font size */
+    font-weight: bold; /* Bold text */
+    font-family: Arial, sans-serif; /* Font family */
+    text-align: center; /* Text alignment */
+    margin: 10px; /* Margins */
+    padding: 5px; /* Padding */
+    background-color: #f0f0f0; /* Background color */
+}
