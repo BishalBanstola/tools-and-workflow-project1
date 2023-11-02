@@ -113,3 +113,15 @@ header h1 {
     flex: 1;
     margin-top: 20px;   
 }
+.image img {
+    width: 200px; /* Width of <img> elements within .image class */
+    height: auto; /* Adjust height to maintain aspect ratio */
+    border: 1px solid #333; /* Border around <img> elements within .image class */
+}
+.video iframe {
+    width: 100%; /* Full width */
+    height: auto; /* Set a fixed height */
+    border: 1px solid #333; /* Border around the iframe */
+    margin: 10px 0; /* Margin above and below the iframe */
+    display: block; /* Make the iframe a block-level element */
+}
