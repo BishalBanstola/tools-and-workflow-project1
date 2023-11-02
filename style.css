@@ -31,3 +31,11 @@ p {
 p {
     color: hsl(240, 100%, 50%); /* Using HSL for blue */
 }
+ul {
+    list-style-type: square;
+}
+
+ul li {
+    color: #333; /* Text color for list items */
+    margin: 5px 0; /* Margins around list items (top and bottom) */
+}
