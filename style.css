@@ -67,4 +67,18 @@ header h1 {
     color: #333; /* Text color for the <h1> element within a <header> */
     font-size: 24px; /* Font size for the <h1> element within a <header> */
     font-weight: bold; /* Bold text for the <h1> element within a <header> */
+}#home {
+    /* Your CSS styles for the element with id="home" go here */
+    background-color: #f0f0f0; /* Example background color */
+    color: #333; /* Example text color */
+    font-size: 24px; /* Example font size */
+    /* Add more styles as needed */
+    padding: 50px 0;
+}
+.content {
+    background-color: #f0f0f0; /* Background color for elements with the .content class */
+    color: #333; /* Text color for elements with the .content class */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
