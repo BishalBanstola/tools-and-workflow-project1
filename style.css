@@ -68,7 +68,6 @@ header h1 {
     font-size: 24px; /* Font size for the <h1> element within a <header> */
     font-weight: bold; /* Bold text for the <h1> element within a <header> */
 }#home {
-    /* Your CSS styles for the element with id="home" go here */
     background-color: #f0f0f0; /* Example background color */
     color: #333; /* Example text color */
     font-size: 24px; /* Example font size */
@@ -126,7 +125,6 @@ header h1 {
     display: block; /* Make the iframe a block-level element */
 }
 #boxes {
-    /* Your CSS styles for the element with id="boxes" go here */
     background-color: #f0f0f0; /* Example background color */
     color: #333; /* Example text color */
     font-size: 16px; /* Example font size */
@@ -142,7 +140,6 @@ header h1 {
     text-align: center;
 }
 section {
-    /* Your CSS styles for the <section> element go here */
     background-color: #f0f0f0; /* Example background color */
     color: #333; /* Example text color */
     font-size: 16px; /* Example font size */
