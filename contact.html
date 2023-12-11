@@ -99,6 +99,9 @@
                 var feedbackMessage = $('#feedbackMessage');
                 feedbackMessage.text(message);
                 feedbackMessage.show();
+                setTimeout(function () {
+                    feedbackMessage.hide();
+                }, 3000);
             }
 
             function saveToLocalStorage(name, email, address, phone, question, intake) {
