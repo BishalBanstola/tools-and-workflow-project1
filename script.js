@@ -102,27 +102,33 @@ $(document).ready(function () {
         scrollToSection(afterApplySection);
     });
 
+    //mouse enter on images
     heroImage.on('mouseenter', function () {
         heroImage.css('transform', 'scale(1.2)');
     });
 
+    //mouse exit on images
     heroImage.on('mouseout', function () {
         heroImage.css('transform', 'scale(1)');
     });
 
+    //double click on text
     doubleClickInstruction.on('dblclick', function () {
         window.open('https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/eligibility.html', '_blank');
     });
 
+    //right click on text
     $(document).on('contextmenu', function (event) {
         event.preventDefault();
         alert('Visit the IRRC website for more information.');
     });
 
+    //styling
     allListItems.css('font-weight', 'bold');
 
     allSectionHeadings.css('color', '#ff6b6b');
 
+    //checklist print
     $('#printButton').on('click', function () {
         $(this).fadeOut('fast', function () {
             $(this).fadeIn('fast');
@@ -149,6 +155,7 @@ $(document).ready(function () {
         toggleGoToTopButton();
     });
 
+    //go to top button
     function toggleGoToTopButton() {
         let button = $('#goToTopButton');
         if ($(document).scrollTop() > 20) {
