@@ -1,50 +1,117 @@
-const eligibilityBox = document.getElementById('eligibility');
-const documentsBox = document.getElementById('documents');
-const howToApplyBox = document.getElementById('how-to-apply');
-const afterApplyBox = document.getElementById('after-apply');
-const eligibilitySection = document.getElementById('eligibility-section');
-const documentsSection = document.getElementById('documents-section');
-const howToApplySection = document.getElementById('how-to-apply-section');
-const afterApplySection = document.getElementById('after-apply-section');
-const heroImage = document.querySelector('#home .image img');
-const howToApplyVideo = document.querySelector('#how-to-apply-section .video iframe');
-const doubleClickInstruction = document.querySelector('.double-click-instruction');
-const allListItems = document.querySelectorAll('li');
-const allSectionHeadings = document.querySelectorAll('h2, h3');
+$(document).ready(function () {
+    const eligibilityBox = $('#eligibility');
+    const documentsBox = $('#documents');
+    const howToApplyBox = $('#how-to-apply');
+    const afterApplyBox = $('#after-apply');
+    const eligibilitySection = $('#eligibility-section');
+    const documentsSection = $('#documents-section');
+    const howToApplySection = $('#how-to-apply-section');
+    const afterApplySection = $('#after-apply-section');
+    const heroImage = $('#hero-image');
+    const howToApplyVideo = $('#how-to-apply-section .video iframe');
+    const doubleClickInstruction = $('.double-click-instruction');
+    const allListItems = $('li');
+    const allSectionHeadings = $('h2, h3');
 
-function scrollToSection(section) {
-    console.log('here')
-    const offset = section.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({
-        behavior: 'smooth',
-        top: offset
+    function checkCookieConsent() {
+        return localStorage.getItem('cookieConsent') === 'true';
+    }
+
+    function setCookieConsent() {
+        localStorage.setItem('cookieConsent', 'true');
+    }
+
+    if (!checkCookieConsent()) {
+        $('#cookieModal').modal('show');
+    }
+
+    $('#cookieModal').on('hide.bs.modal', function () {
+        setCookieConsent();
     });
-}
 
-eligibilityBox.addEventListener('click', () => scrollToSection(eligibilitySection));
-documentsBox.addEventListener('click', () => scrollToSection(documentsSection));
-howToApplyBox.addEventListener('click', () => scrollToSection(howToApplySection));
-afterApplyBox.addEventListener('click', () => scrollToSection(afterApplySection));
+    function scrollToSection(section) {
+        console.log('here');
+        const offset = section.offset().top + $(window).scrollTop();
+        $('html, body').animate({
+            scrollTop: offset
+        }, 'instant');
+    }
 
-heroImage.addEventListener('mouseenter', () => {
-    heroImage.style.transform = 'scale(1.2)';
+    eligibilityBox.on('click', function () {
+        scrollToSection(eligibilitySection);
+    });
+    documentsBox.on('click', function () {
+        scrollToSection(documentsSection);
+    });
+    howToApplyBox.on('click', function () {
+        scrollToSection(howToApplySection);
+    });
+    afterApplyBox.on('click', function () {
+        scrollToSection(afterApplySection);
+    });
+
+    heroImage.on('mouseenter', function () {
+        heroImage.css('transform', 'scale(1.2)');
+    });
+
+    heroImage.on('mouseout', function () {
+        heroImage.css('transform', 'scale(1)');
+    });
+
+    doubleClickInstruction.on('dblclick', function () {
+        window.open('https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/eligibility.html', '_blank');
+    });
+
+    $(document).on('contextmenu', function (event) {
+        event.preventDefault();
+        alert('Visit the IRRC website for more information.');
+    });
+
+    allListItems.css('font-weight', 'bold');
+
+    allSectionHeadings.css('color', '#ff6b6b');
+
+    $('#printButton').on('click', function () {
+        $(this).fadeOut('fast', function () {
+            $(this).fadeIn('fast');
+        });
+        printChecklist();
+    });
+
+    function printChecklist() {
+        $('#printButton').css('display', 'none');
+        let printWindow = window.open('', '_blank');
+        let checklistContent = $('#documents-section')[0].outerHTML;
+
+        printWindow.document.write('<html><head><title>Documents Required Checklist</title></head><body>');
+        printWindow.document.write(checklistContent);
+        printWindow.document.write('</body></html>');
+
+        printWindow.print();
+
+        $('#printButton').css('display', 'block');
+        printWindow.close();
+    }
+
+    $(window).on('scroll', function () {
+        toggleGoToTopButton();
+    });
+
+    function toggleGoToTopButton() {
+        let button = $('#goToTopButton');
+        if ($(document).scrollTop() > 20) {
+            button.css('display', 'block');
+        } else {
+            button.css('display', 'none');
+        }
+    }
+
+    $('#goToTopButton').on('click', function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 'slow');
+    });
 });
 
-heroImage.addEventListener('mouseout', () => {
-    heroImage.style.transform = 'scale(1)';
-});
 
-doubleClickInstruction.addEventListener('dblclick', function () {
-    window.open('https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/eligibility.html', '_blank');
-});
-document.addEventListener('contextmenu', function (event) {
-    event.preventDefault();
-    alert('Visit the IRRC website for more information.');
-});
-allListItems.forEach(function (li) {
-    li.style.fontWeight = 'bold';
-});
 
-allSectionHeadings.forEach(function (heading) {
-    heading.style.color = '#ff6b6b';
-});
