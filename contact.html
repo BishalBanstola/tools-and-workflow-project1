@@ -120,8 +120,7 @@
                 $('#previousQuestions').empty();
 
                 previousQuestions.forEach(function (question) {
-                    var listItem = $('<li class="list-group-item"></li>').text('Question: ' + question.question +
-                        ' | Name: ' + question.name + ' | Email: ' + question.email);
+                    var listItem = $('<li class="list-group-item"></li>').text('Question: ' + question.question);
                     $('#previousQuestions').append(listItem);
                 });
             }
