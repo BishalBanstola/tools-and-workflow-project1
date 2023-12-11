@@ -184,11 +184,6 @@
         </div>
     </section>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <div class="container">
-            <p class="fs-4">Created by Bishal and Islam</p>
-        </div>
-    </footer>
 
     <!-- Cookie Consent Modal -->
     <div class="modal fade" id="cookieModal" tabindex="-1" role="dialog" aria-labelledby="cookieModalLabel"
@@ -233,6 +228,31 @@
         </div>
     </div>
 
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="fs-4">Created by Bishal and Islam</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                Give Feedback
+            </button>
+        </div>
+    </footer>
+
+    <!-- Feedback Modal -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Feedback</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="feedbackMessage">How would you rate this site?</p>
+                    <button type="button" class="btn btn-success" id="upvoteBtn">Upvote</button>
+                    <button type="button" class="btn btn-danger" id="downvoteBtn">Downvote</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- "Go to Top" button -->

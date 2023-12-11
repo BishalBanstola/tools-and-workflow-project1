@@ -53,6 +53,33 @@ $(document).ready(function () {
         $('#importantUpdatesModal').modal('show');
     }
 
+    //feedback modal
+    var feedbackType = localStorage.getItem('feedbackType') || 'none';
+
+    updateFeedbackModalContent();
+
+    $('#upvoteBtn').click(function () {
+        feedbackType = 'upvote';
+        updateFeedbackModalContent();
+    });
+
+    $('#downvoteBtn').click(function () {
+        feedbackType = 'downvote';
+        updateFeedbackModalContent();
+    });
+
+    function updateFeedbackModalContent() {
+        localStorage.setItem('feedbackType', feedbackType);
+
+        if (feedbackType === 'upvote') {
+            $('#feedbackMessage').text('Thank you for your upvote!');
+        } else if (feedbackType === 'downvote') {
+            $('#feedbackMessage').text('Sorry to hear that. Your downvote has been noted.');
+        } else {
+            $('#feedbackMessage').text('How would you rate this site?');
+        }
+    }
+
     //scroll function
     function scrollToSection(section) {
         console.log('here');
