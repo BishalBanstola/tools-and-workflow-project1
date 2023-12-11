@@ -114,6 +114,19 @@
                 localStorage.setItem('contactInfo', JSON.stringify(formData));
             }
 
+            function loadPreviousQuestions() {
+                var previousQuestions = JSON.parse(localStorage.getItem('previousQuestions')) || [];
+
+                $('#previousQuestions').empty();
+
+                previousQuestions.forEach(function (question) {
+                    var listItem = $('<li class="list-group-item"></li>').text('Question: ' + question.question +
+                        ' | Name: ' + question.name + ' | Email: ' + question.email);
+                    $('#previousQuestions').append(listItem);
+                });
+            }
+
+
         });
     </script>
 
