@@ -126,7 +126,17 @@
                 });
             }
 
-
+            function loadContactInfo() {
+                var savedContactInfo = JSON.parse(localStorage.getItem('contactInfo'));
+                console.log(savedContactInfo)
+                if (savedContactInfo) {
+                    $('#name').val(savedContactInfo.name);
+                    $('#email').val(savedContactInfo.email);
+                    $('#address').val(savedContactInfo.address);
+                    $('#phone').val(savedContactInfo.phone);
+                    $('#intake').val(savedContactInfo.intake);
+                }
+            }
         });
     </script>
 
