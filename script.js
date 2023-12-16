@@ -34,13 +34,6 @@ $(document).ready(function () {
     function checkNeverShowUpdates() {
         return localStorage.getItem('neverShowUpdates') === 'true';
     }
-
-    function setNeverShowUpdates() {
-        localStorage.setItem('neverShowUpdates', 'true');
-    }
-    function checkNeverShowUpdates() {
-        return localStorage.getItem('neverShowUpdates') === 'true';
-    }
     $('#neverShowUpdatesBtn').click(function () {
         setNeverShowUpdates();
         $('#importantUpdatesModal').modal('hide');
