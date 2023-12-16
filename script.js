@@ -74,7 +74,6 @@ $(document).ready(function () {
 
     //scroll function
     function scrollToSection(section) {
-        console.log('here');
         const offset = section.offset().top + $(window).scrollTop();
         $('html, body').animate({
             scrollTop: offset
