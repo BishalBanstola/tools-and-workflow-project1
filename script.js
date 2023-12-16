@@ -8,7 +8,6 @@ $(document).ready(function () {
     const howToApplySection = $('#how-to-apply-section');
     const afterApplySection = $('#after-apply-section');
     const heroImage = $('#hero-image');
-    const howToApplyVideo = $('#how-to-apply-section .video iframe');
     const doubleClickInstruction = $('.double-click-instruction');
     const allListItems = $('li');
     const allSectionHeadings = $('h2, h3');
